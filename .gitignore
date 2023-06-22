@@ -1,5 +1,0 @@
-.vscode/
-*.dSYM/*
-*.o
-*.exe
-tests/build/*
