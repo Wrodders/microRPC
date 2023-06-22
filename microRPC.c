@@ -4,13 +4,13 @@
 
 
 // *** // Static Array Allocation // *** //
-const int MAX_CMD_SIZE = 28;
-const int MAX_ARGS = 5;
-const int MAX_SERVICES = 10;
-const int MAX_INTERFACES = 5;
-const int MAX_RESPONSE_SIZE = 10;
-const int MAX_ID_SIZE = 5;
-const int TARGET_ARG_LEN = 3; 
+#define MAX_CMD_SIZE 28
+#define MAX_ARGS 5
+#define MAX_SERVICES 5
+#define MAX_INTERFACES 2
+#define MAX_RESPONSE_SIZE 10
+#define MAX_ID_SIZE 3
+#define TARGET_ARG_LEN 2 
 
 
 // *** // Data Structures // *** //
