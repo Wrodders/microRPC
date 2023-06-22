@@ -1,6 +1,3 @@
-#ifndef UCOMMANDER_H
-#define UCOMMANDER_H
-
 
 // *** // Includes // *** //
 #include "../include/helpers.h"
