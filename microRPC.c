@@ -1,6 +1,6 @@
 
 // *** // Includes // *** //
-#include "../include/helpers.h"
+#include "include/helpers.h"
 
 
 // *** // Static Array Allocation // *** //
@@ -304,7 +304,5 @@ int getServiceRet(Interface *interface, char *id){
 }
 
 
-
-#endif 
 
 
