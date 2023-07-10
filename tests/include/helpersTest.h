@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../include/helpers.h"
+#include "../../include/helpers.h"
 
 // Color codes for printing
 #define RED   "\x1B[31m"
@@ -241,13 +241,4 @@ void test_uCTrunk(){
     }
 }
 
-
-int main() {
-    test_uStrlen();
-    test_uCcpy();
-    test_uStrcmp();
-    test_uCSplit();
-    test_uCTrunk();
-    return 0;
-}
 

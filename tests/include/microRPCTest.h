@@ -1,5 +1,5 @@
-#include "../../src/microRPC.h"
-#include "dataTable.h"
+#include "../../include/microRPC.h"
+
 
 #include <stdio.h>  // scanf & printf
 

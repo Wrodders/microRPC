@@ -1,5 +1,5 @@
 .vscode/
-*.dSYM/*
+*.dSYM/
 *.o
 *.exe
 tests/build/*
