@@ -11,9 +11,7 @@
 // - Cpy: Copy a char array + null terminator to a buffer
 // - Cmp: Compare two char arrays
 
-
-
-unsigned int uCsize(char *str){
+unsigned int uCsize(const char *str){
     //@brief: Return the size of a string 
     //@Note:  Includes the null terminator
     int len = 0;
@@ -26,13 +24,14 @@ unsigned int uCsize(char *str){
 void uCcpy(char *p,char const *q){
     //@brief: copy a string from q to p
     //@note: Buffer overflow is not checked
+
     while(*q != '\0'){
         *p++ = *q++;
     }
     *p = '\0';
 }
 
-int uStrcmp(char *str1, char *str2){
+int uStrcmp(const char *str1, const char *str2){
     //@brief: compare two strings
     //@return: 0 if equal, 1 if not equal
     while(*str1 != '\0' && *str2 != '\0'){
@@ -45,7 +44,7 @@ int uStrcmp(char *str1, char *str2){
     return 0;
 }
 
-int uCSplit(char *buf, char *src, char delim, int start){
+int uCSplit(char *buf, const char *src, const char delim, int start){
     //@brief: copy a string to a buffer until a delimiter is found
     //@return: the index of the next character after the delimiter
     int j = 0;
@@ -57,13 +56,13 @@ int uCSplit(char *buf, char *src, char delim, int start){
         j++;
     }
     buf[j] = '\0';
-    return j+1;
+    return j;
 }
 
 int uCTrunk(char *buf, const char *src, int startIdx, int endIdx){
-    //@brief: copy a string segment to a buffer
-    //@return: number of characters copied excluding '\0'
-    //@note: Null terminatior is inserted
+    //@brief: copy a string segment to a buffer 
+    //@return: size of the copied string
+    //@note: Null terminatior is inserted at the endIdx + 1
     //@note: buffer overflow is not checked
     
     int j = 0; // buffer index
@@ -76,20 +75,6 @@ int uCTrunk(char *buf, const char *src, int startIdx, int endIdx){
     }
     buf[j] = '\0'; 
     return j;
-}
-
-
-
-// Hash Function for the table
-unsigned int hash(char *key, int tableSize){
-    int m = 31;
-    unsigned int len = uCsize(key); 
-    unsigned int hashValue = 0;
-    for(int i = 0; i < len; i++){
-        hashValue = (hashValue * m + key[i]);
-
-    }
-    return hashValue % tableSize;
 }
 
 #endif
