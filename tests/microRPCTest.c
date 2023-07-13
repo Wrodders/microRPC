@@ -68,7 +68,7 @@ int main(void){
     char input[255] = "S1,1234,ABCDEFGHI";
 
 
-
+    printf("TEST 1: \n");
 
     runRPCManager(input, &rpcManager, response);
 
